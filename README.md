@@ -9,81 +9,81 @@ I am currently developing a machine learning model in Python that uses historica
 
 Users will also be able to create an account and save previous predictions so they can view them later.
 
-Core Features
+Core Features:
 
-Select a home team and away team for a Champions League match
+- Select a home team and away team for a Champions League match
 
-Generate a match prediction using the Python ML pipeline
+- Generate a match prediction using the Python ML pipeline
 
-View historical data for individual teams
+- View historical data for individual teams
 
-View information about the model's performance
+- View information about the model's performance
 
-Create and log into a user account
+- Create and log into a user account
 
-Save predictions to a user's account
+- Save predictions to a user's account
 
-View previously saved predictions
+- View previously saved predictions
 
-Delete saved predictions
+- Delete saved predictions
 
-GraphQL API
+- GraphQL API
 
-The backend will use GraphQL to manage application data and interactions.
+- The backend will use GraphQL to manage application data and interactions.
 
-Types
+- Types
 
-User
+- User
 
-Represents someone with an account on the application.
-
-Possible fields:
-
-id
-
-username
-
-email
-
-predictions
-
-Prediction
-
-Represents a saved match prediction created by a user.
+- Represents someone with an account on the application.
 
 Possible fields:
 
-id
+- id
 
-homeTeam
+- username
 
-awayTeam
+- email
 
-predictedResult
+- predictions
 
-createdAt
+- Prediction
 
-userId
+- Represents a saved match prediction created by a user.
 
-Queries
+Possible fields:
 
-The application will support four main queries:
+- id
+
+- homeTeam
+
+- awayTeam
+
+- predictedResult
+
+- createdAt
+
+- userId
+
+- Queries
+
+- The application will support four main queries:
 
 1. Get Available Teams
 
-Returns the Champions League teams that can be selected when creating a prediction.
+- Returns the Champions League teams that can be selected when creating a prediction.
 
 2. Get Team Historical Data
 
-Returns historical match information for a selected team that can help users understand the data behind the model.
+- Returns historical match information for a selected team that can help users understand the data behind the model.
 
 3. Get Model Performance Metrics
 
-Returns information about the machine learning model's performance, such as its evaluation metrics.
+- Returns information about the machine learning model's performance, such as its evaluation metrics.
 
 4. Get User Prediction History
 
-Returns predictions previously saved by the logged-in user.
+- Returns predictions previously saved by the logged-in user.
 
 Mutations
 
@@ -91,30 +91,30 @@ The application will support four main mutations:
 
 1. Register User
 
-Creates a new user account.
+- Creates a new user account.
 
 2. Login User
 
-Authenticates an existing user so they can access their saved predictions.
+- Authenticates an existing user so they can access their saved predictions.
 
 3. Save Prediction
 
-Saves a generated Champions League match prediction to the user's account.
+- Saves a generated Champions League match prediction to the user's account.
 
 4. Delete Prediction
 
-Deletes one of the user's previously saved predictions.
+- Deletes one of the user's previously saved predictions.
 
 Machine Learning Integration
 
-The prediction system will be built in Python using historical Champions League match data.
+- The prediction system will be built in Python using historical Champions League match data.
 
-The long-term goal is to connect the trained machine learning pipeline to the web application so that a user can select two teams:
+- The long-term goal is to connect the trained machine learning pipeline to the web application so that a user can select two teams:
 
-Home Team + Away Team → ML Model → Match Prediction
+- Home Team + Away Team → ML Model → Match Prediction
 
-The prediction can then be displayed on the website and optionally saved to the user's account.
+- The prediction can then be displayed on the website and optionally saved to the user's account.
 
 Project Goal
 
-The goal of this project is to combine machine learning, backend development, GraphQL, and web development into one application while turning an existing machine learning project into something users can interact with.
+- The goal of this project is to combine machine learning, backend development, GraphQL, and web development into one application while turning an existing machine learning project into something users can interact with.
