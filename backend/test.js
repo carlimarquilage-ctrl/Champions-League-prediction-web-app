@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const connectDB = require('./db')
-const User = require('./models/User');
+const User = require('./backend/models/User');
 
 async function testDatabase() {
     try {

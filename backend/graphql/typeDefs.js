@@ -15,7 +15,7 @@ const typeDefs = `#graphql
     }
     type Query {
         getTeams: [String!]!
-        getUserPredictions: [Prediction!]!
+        getUserPrediction: [Prediction!]!
         getModelMetrics: ModelMetrics
         getTeamHistory(team: String!): TeamHistory
         }
