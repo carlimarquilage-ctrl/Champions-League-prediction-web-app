@@ -102,6 +102,7 @@ const resolvers = {
                 predictedResult
             });
 
+
             return {
                 id: prediction._id.toString(),
                 userId: prediction.userID.toString(),
@@ -110,11 +111,23 @@ const resolvers = {
                 predictedResult: prediction.predictedResult,
                 createdAt: prediction.createdAt.toISOString()
             };
+        },
+
+        deletePrediction: async (_, { id }, context) => {
+            if (!context.userID) {
+                throw new Error("You must be logged in to delete a prediction");
+            }
+
+            const result = await Prediction.deleteOne({
+                _id: id,
+                userID: context.userID
+            });
+
+            return result.deletedCount === 1;
         }
 
-
-
     }
+
 };
 
 module.exports = resolvers;
